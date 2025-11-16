@@ -1,18 +1,22 @@
 #include "stdio.h"
 #include "string.h"
 #include "images.h"
+#include "hal_data.h"
+//#include "stdbool.h"
 
-#define N 128    /*Frame dimension for QCIF format*/
-#define M 150     /*Frame dimension for QCIF format*/
 
-//#define B 5      /*Block size*/
+#define N 10    /*Frame dimension for QCIF format*/
+#define M 10     /*Frame dimension for QCIF format*/
+
+
+#define B 10      /*Block size*/
 
 #define p 7       /*Search space. Restricted in a [-p,p] region around the
                     original location of the block.*/
 
 
-void phods_motion_estimation(const int current[], const int previous[],
-        int vectors_x[N/B][M/B],int vectors_y[N/B][M/B], int B)
+void phods_motion_estimation(const int current[N][M], const int previous[N][M],
+        int vectors_x[N/B][M/B],int vectors_y[N/B][M/B])
 {
     int x, y, i, j, k, l, p1, p2, q2, distx, disty, S, min1, min2, bestx, besty;
 
@@ -28,6 +32,10 @@ void phods_motion_estimation(const int current[], const int previous[],
             vectors_y[i][j] = 0;
         }
     }
+
+//    memset(vectors_x, 0, sizeof vectors_x); // better than init with for loops
+//    memset(vectors_y, 0, sizeof vectors_y);
+
 
     /*For all blocks in the current frame*/
     for(x=N/B-1; x>=0; x--)
@@ -50,7 +58,7 @@ void phods_motion_estimation(const int current[], const int previous[],
                     {
                         for(l=B-1; l--;)
                         {
-                            p1 = current[(B*x+k)*M + B*y+l];
+                            p1 = current[B*x+k][B*y+l];
 
                             if((B*x + vectors_x[x][y] + i + k) < 0 ||
                                     (B*x + vectors_x[x][y] + i + k) > (N-1) ||
@@ -59,7 +67,7 @@ void phods_motion_estimation(const int current[], const int previous[],
                             {
                                 p2 = 0;
                             } else {
-                                p2 = previous[(B*x+vectors_x[x][y]+i+k)*M + B*y+vectors_y[x][y]+l];
+                                p2 = previous[B*x+vectors_x[x][y]+i+k][B*y+vectors_y[x][y]+l];
                             }
 
                             if(p1-p2>0){
@@ -76,7 +84,7 @@ void phods_motion_estimation(const int current[], const int previous[],
                             {
                                 q2 = 0;
                             } else {
-                                q2 = previous[(B*x+vectors_x[x][y]+k)*M + B*y+vectors_y[x][y]+i+l];
+                                q2 = previous[B*x+vectors_x[x][y]+i+k][B*y+vectors_y[x][y]+l];
                             }
 
                             if(p1-q2>0){
@@ -109,7 +117,7 @@ void phods_motion_estimation(const int current[], const int previous[],
                     {
                         for(l=B-1; l--;)
                         {
-                            p1 = current[(B*x+k)*M + B*y+l];
+                            p1 = current[B*x+k][B*y+l];
 
                             if((B*x + vectors_x[x][y] + i + k) < 0 ||
                                     (B*x + vectors_x[x][y] + i + k) > (N-1) ||
@@ -118,7 +126,7 @@ void phods_motion_estimation(const int current[], const int previous[],
                             {
                                 p2 = 0;
                             } else {
-                                p2 = previous[(B*x+vectors_x[x][y]+i+k)*M + B*y+vectors_y[x][y]+l];
+                                p2 = previous[B*x+vectors_x[x][y]+i+k][B*y+vectors_y[x][y]+l];
                             }
 
                             if(p1-p2>0){
@@ -135,7 +143,7 @@ void phods_motion_estimation(const int current[], const int previous[],
                             {
                                 q2 = 0;
                             } else {
-                                q2 = previous[(B*x+vectors_x[x][y]+k)*M + B*y+vectors_y[x][y]+i+l];
+                                q2 = previous[B*x+vectors_x[x][y]+i+k][B*y+vectors_y[x][y]+l];
                             }
 
                             if(p1-q2>0){
@@ -168,7 +176,7 @@ void phods_motion_estimation(const int current[], const int previous[],
                     {
                         for(l=B-1; l--;)
                         {
-                            p1 = current[(B*x+k)*M + B*y+l];
+                            p1 = current[B*x+k][B*y+l];
 
                             if((B*x + vectors_x[x][y] + i + k) < 0 ||
                                     (B*x + vectors_x[x][y] + i + k) > (N-1) ||
@@ -177,7 +185,7 @@ void phods_motion_estimation(const int current[], const int previous[],
                             {
                                 p2 = 0;
                             } else {
-                                p2 = previous[(B*x+vectors_x[x][y]+i+k)*M + B*y+vectors_y[x][y]+l];
+                                p2 = previous[B*x+vectors_x[x][y]+i+k][B*y+vectors_y[x][y]+l];
                             }
 
                             if(p1-p2>0){
@@ -194,7 +202,7 @@ void phods_motion_estimation(const int current[], const int previous[],
                             {
                                 q2 = 0;
                             } else {
-                                q2 = previous[(B*x+vectors_x[x][y]+k)*M + B*y+vectors_y[x][y]+i+l];
+                                q2 = previous[B*x+vectors_x[x][y]+i+k][B*y+vectors_y[x][y]+l];
                             }
 
                             if(p1-q2>0){
@@ -228,50 +236,30 @@ void phods_motion_estimation(const int current[], const int previous[],
 
 }
 
-#include <stdio.h>
-#include <stdbool.h>
 
-#define MAX 1000  // big enough for your numbers
+/*******************************************************************************************************************//**
+ * @brief  Blinky example application
+ *
+ * Blinks all leds at a rate of 1 second using the software delay function provided by the BSP.
+ * Only references two other modules including the BSP, IOPORT.
+ *
+ **********************************************************************************************************************/
+void hal_entry(void) {
 
-#define MAX (N>M)?N:M
+    CoreDebug->DEMCR |= 0x01000000;
+       ITM->LAR = 0xC5ACCE55;
+       DWT->CYCCNT = 0;
+       DWT->CTRL |= 1;
+       double times[10];
+       int motion_vectors_x[N/B][M/B],
+           motion_vectors_y[N/B][M/B], i, j;
 
-bool present[MAX] = {false};
-int times[MAX];
-void common_divisors(int N, int M){
+      for(int i = 0; i<10; i++){
+         DWT->CYCCNT = 0;
+         phods_motion_estimation(current,previous,motion_vectors_x,motion_vectors_y);
+         times[i] = DWT->CYCCNT;
+         }
 
-    for (int i = 1; i <= MAX; i++) {
-        if (N % i == 0 && M % i == 0) {
-            present[i] = true;
-        }
-    }
+      while(1);
 }
 
-int main(){
-    double times[10];
-    int motion_vectors_x[N/B][M/B],
-    motion_vectors_y[N/B][M/B], i, j;
-
-    for(int i = 0; i<10; i++)
-        phods_motion_estimation(current,previous,motion_vectors_x,motion_vectors_y, 5);
-
-    for(i = 0; i < N/B; i++)
-        for(int j = 0; j < M/B; j++)
-            printf("%d, ", motion_vectors_x[i][j]);
-    printf("\n");
-
-    printf("\n");
-
-    for(i = 0; i < N/B; i++)
-        for(int j = 0; j < M/B; j++)
-            printf("%d, ", motion_vectors_y[i][j]);
-    printf("\n");
-
-    for(i = 0; i < MAX ; i++){
-        if(present[i]){
-            DWT->CYCCNT=0;
-            phods_motion_estimation(current,previous,motion_vectors_x,motion_vectors_y, i);
-            times[i] = DWT->CYCCNT;
-        }
-    }
-
-}
