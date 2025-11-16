@@ -1,0 +1,5 @@
+uf2:   system.cpu.numCycles                         59819187
+uf4:   system.cpu.numCycles                         59625905
+uf8:   system.cpu.numCycles                         59473897
+uf16:  system.cpu.numCycles                         59375817
+uf32:  system.cpu.numCycles                         59242097

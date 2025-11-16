@@ -1,0 +1,8 @@
+Pareto Optimal Configurations
+
+1) L1I (KB) = 4 L1D (KB) = 16 L2 (KB) = 128 UF = 16 config. results in Execution Time (CC) = 42416295 and Total Memory (KB) = 148
+2) L1I (KB) = 16 L1D (KB) = 32 L2 (KB) = 128 UF = 8 config. results in Execution Time (CC) = 42232314 and Total Memory (KB) = 176
+3) L1I (KB) = 32 L1D (KB) = 32 L2 (KB) = 256 UF = 32 config. results in Execution Time (CC) = 41894698 and Total Memory (KB) = 320
+4) L1I (KB) = 4 L1D (KB) = 4 L2 (KB) = 128 UF = 16 config. results in Execution Time (CC) = 59480977 and Total Memory (KB) = 136
+5) L1I (KB) = 64 L1D (KB) = 32 L2 (KB) = 128 UF = 16 config. results in Execution Time (CC) = 42125956 and Total Memory (KB) = 224
+6) L1I (KB) = 32 L1D (KB) = 64 L2 (KB) = 256 UF = 32 config. results in Execution Time (CC) = 41890054 and Total Memory (KB) = 352

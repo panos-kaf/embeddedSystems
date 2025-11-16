@@ -1,0 +1,6 @@
+2kb:   system.cpu.numCycles                         60032355
+4kb:   system.cpu.numCycles                         59925276
+8kb:   system.cpu.numCycles                         59823000
+16kb:  system.cpu.numCycles                         42999333
+32kb:  system.cpu.numCycles                         42771258
+64kb:  system.cpu.numCycles                         42922378
