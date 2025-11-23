@@ -36,9 +36,10 @@ ax.set_xticks([v + bar_width for v in x])
 ax.set_xticklabels(clients)
 
 ax.set_ylabel("Memory Accesses")
-ax.set_title("Memory Access Comparison (ClientList × PacketList)")
+ax.set_title("Memory Access Comparison (ClientList x PacketList)")
 ax.legend(title="Packet Type")
 
 plt.tight_layout()
+plt.savefig('memAccesses.svg')
 plt.show()
 
