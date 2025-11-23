@@ -7,7 +7,7 @@ packetList="SLL_PK DLL_PK DYN_ARR_PK"
 out_dir="results"
 
 logs_dir="${out_dir}/mem_logs"
-accesses_dir="${out_dir}/numAccesses"
+accesses_dir="${out_dir}/mem_accesses"
 footprints_dir="${out_dir}/mem_footprint"
 massif_dir="${out_dir}/massif_out"
 
