@@ -1,0 +1,477 @@
+--------------------------------------------------------------------------------
+Command:            ./drr
+Massif arguments:   --massif-out-file=results/massif_out/DLL_CL_DYN_ARR_PK.txt
+ms_print arguments: results/massif_out/DLL_CL_DYN_ARR_PK.txt
+--------------------------------------------------------------------------------
+
+
+    MB
+1.128^                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                      @#
+     |                                                                  @:::@#
+     |                                                             :::::@:: @#
+     |                                   @@:::::@@:::::::::::::::@@:::  @:: @#
+     |                                   @@: :::@ ::: :: : :: : :@ :::  @:: @#
+     |                                 @@@@: :::@ ::: :: : :: : :@ :::  @:: @#
+     |                                 @ @@: :::@ ::: :: : :: : :@ :::  @:: @#
+     |                               @@@ @@: :::@ ::: :: : :: : :@ :::  @:: @#
+     |                          @@ ::@ @ @@: :::@ ::: :: : :: : :@ :::  @:: @#
+     |                          @ :::@ @ @@: :::@ ::: :: : :: : :@ :::  @:: @#
+     |                       : @@ :::@ @ @@: :::@ ::: :: : :: : :@ :::  @:: @#
+     |                  ::@::::@@ :::@ @ @@: :::@ ::: :: : :: : :@ :::  @:: @#
+     |                  ::@: ::@@ :::@ @ @@: :::@ ::: :: : :: : :@ :::  @:: @#
+     |            :::@@@::@: ::@@ :::@ @ @@: :::@ ::: :: : :: : :@ :::  @:: @#
+     |            : :@  ::@: ::@@ :::@ @ @@: :::@ ::: :: : :: : :@ :::  @:: @#
+     |      ::::::: :@  ::@: ::@@ :::@ @ @@: :::@ ::: :: : :: : :@ :::  @:: @#
+     | :::::: :: :: :@  ::@: ::@@ :::@ @ @@: :::@ ::: :: : :: : :@ :::  @:: @#
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   285.2
+
+Number of snapshots: 51
+ Detailed snapshots: [10, 13, 17, 18, 22, 23, 24, 25, 30, 41, 45, 48, 49, 50 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      8,273,889          116,552           82,888        33,664            0
+  2     12,043,557          113,512           81,376        32,136            0
+  3     21,114,294          101,328           75,292        26,036            0
+  4     27,019,422          171,856          123,788        48,068            0
+  5     34,698,689          166,008          120,872        45,136            0
+  6     40,395,152          159,672          117,704        41,968            0
+  7     47,616,343          167,504          129,428        38,076            0
+  8     53,601,328          246,240          189,532        56,708            0
+  9     58,759,311          237,536          185,308        52,228            0
+ 10     66,036,960          290,640          228,580        62,060            0
+78.65% (228,580B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->44.57% (129,536B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->44.57% (129,536B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->44.57% (129,536B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->12.96% (37,668B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->12.96% (37,668B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->12.57% (36,520B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->12.57% (36,520B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->12.57% (36,520B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->03.43% (9,960B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->03.43% (9,960B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->03.43% (9,960B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->03.43% (9,960B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->03.43% (9,960B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.61% (4,672B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.61% (4,672B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.61% (4,672B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.09% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 11     75,528,194          404,696          312,456        92,240            0
+ 12     80,971,478          400,552          310,392        90,160            0
+ 13     86,972,648          394,416          307,332        87,084            0
+77.92% (307,332B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->44.18% (174,272B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->44.18% (174,272B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->44.18% (174,272B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->14.43% (56,916B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->14.43% (56,916B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->11.45% (45,144B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->11.45% (45,144B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->11.45% (45,144B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->03.12% (12,312B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->03.12% (12,312B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->03.12% (12,312B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->03.12% (12,312B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->03.12% (12,312B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.55% (6,112B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.55% (6,112B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.55% (6,112B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.07% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 14     91,218,773          386,448          303,348        83,100            0
+ 15     96,525,932          421,792          330,076        91,716            0
+ 16    100,773,601          411,912          325,144        86,768            0
+ 17    106,290,488          467,824          370,448        97,376            0
+79.19% (370,448B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.25% (221,056B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->47.25% (221,056B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->47.25% (221,056B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->13.35% (62,472B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->13.35% (62,472B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->11.06% (51,744B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->11.06% (51,744B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->11.06% (51,744B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->03.02% (14,112B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->03.02% (14,112B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->03.02% (14,112B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->03.02% (14,112B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->03.02% (14,112B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.43% (6,688B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.43% (6,688B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.43% (6,688B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.06% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 18    110,434,870          537,696          423,768       113,928            0
+78.81% (423,768B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->46.92% (252,288B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->46.92% (252,288B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->46.92% (252,288B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->13.95% (75,000B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->13.95% (75,000B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->10.72% (57,640B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->10.72% (57,640B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->10.72% (57,640B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->02.92% (15,720B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.92% (15,720B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->02.92% (15,720B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.92% (15,720B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->02.92% (15,720B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.33% (7,136B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.33% (7,136B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.33% (7,136B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.05% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 19    117,586,777          528,408          417,104       111,304            0
+ 20    122,005,849          557,944          436,040       121,904            0
+ 21    128,260,999          561,840          441,684       120,156            0
+ 22    132,304,582          626,480          494,688       131,792            0
+78.96% (494,688B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->45.96% (287,936B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->45.96% (287,936B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->45.96% (287,936B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->13.01% (81,528B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->13.01% (81,528B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->11.91% (74,624B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->11.91% (74,624B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->11.91% (74,624B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->03.25% (20,352B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->03.25% (20,352B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->03.25% (20,352B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->03.25% (20,352B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->03.25% (20,352B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.54% (9,632B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.54% (9,632B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.54% (9,632B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.04% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 23    137,783,801          751,840          579,348       172,492            0
+77.06% (579,348B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->43.49% (326,976B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->43.49% (326,976B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->43.49% (326,976B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->15.82% (118,956B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->15.82% (118,956B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->10.58% (79,552B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->10.58% (79,552B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->10.58% (79,552B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->02.89% (21,696B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.89% (21,696B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->02.89% (21,696B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.89% (21,696B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->02.89% (21,696B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.36% (10,208B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.36% (10,208B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.36% (10,208B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.04% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 24    145,660,462          852,120          654,092       198,028            0
+76.76% (654,092B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->44.14% (376,128B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->44.14% (376,128B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->44.14% (376,128B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->16.93% (144,276B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->16.93% (144,276B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->09.36% (79,728B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->09.36% (79,728B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->09.36% (79,728B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->02.55% (21,744B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.55% (21,744B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->02.55% (21,744B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.55% (21,744B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->02.55% (21,744B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.20% (10,208B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.20% (10,208B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.20% (10,208B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.03% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 25    150,804,220          865,512          660,788       204,724            0
+76.35% (660,788B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->43.46% (376,128B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->43.46% (376,128B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->43.46% (376,128B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->17.44% (150,972B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->17.44% (150,972B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->09.21% (79,728B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->09.21% (79,728B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->09.21% (79,728B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->02.51% (21,744B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.51% (21,744B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->02.51% (21,744B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.51% (21,744B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->02.51% (21,744B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.18% (10,208B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.18% (10,208B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.18% (10,208B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.03% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 26    156,259,886          873,336          660,600       212,736            0
+ 27    163,177,349          871,824          659,844       211,980            0
+ 28    168,659,761          870,576          659,220       211,356            0
+ 29    172,737,161          869,616          658,740       210,876            0
+ 30    178,241,233          868,256          658,068       210,188            0
+75.79% (658,068B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->42.38% (367,936B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->42.38% (367,936B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->42.38% (367,936B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->18.02% (156,444B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->18.02% (156,444B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->09.18% (79,728B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->09.18% (79,728B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->09.18% (79,728B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->02.50% (21,744B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.50% (21,744B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->02.50% (21,744B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.50% (21,744B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->02.50% (21,744B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.18% (10,208B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.18% (10,208B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.18% (10,208B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.03% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 31    185,058,338          866,504          657,192       209,312            0
+ 32    189,146,036          865,400          656,640       208,760            0
+ 33    194,568,843          863,936          655,908       208,028            0
+ 34    201,366,283          861,872          654,876       206,996            0
+ 35    206,765,323          860,096          653,988       206,108            0
+ 36    214,894,638          857,288          652,584       204,704            0
+ 37    222,931,492          853,952          650,916       203,036            0
+ 38    228,314,599          851,248          649,572       201,676            0
+ 39    236,326,066          846,400          647,148       199,252            0
+ 40    241,667,587          841,912          644,984       196,928            0
+ 41    247,001,590          829,592          638,816       190,776            0
+77.00% (638,816B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->44.36% (368,000B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->44.36% (368,000B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->44.36% (368,000B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->16.51% (136,992B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->16.51% (136,992B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->09.62% (79,816B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->09.62% (79,816B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->09.62% (79,816B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->02.62% (21,768B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.62% (21,768B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->02.62% (21,768B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.62% (21,768B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->02.62% (21,768B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.23% (10,208B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.23% (10,208B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.23% (10,208B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.03% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 42    254,227,662          908,944          694,436       214,508            0
+ 43    259,598,287          905,056          692,516       212,540            0
+ 44    264,927,852          899,416          689,696       209,720            0
+ 45    274,298,629          973,688          748,276       225,412            0
+76.85% (748,276B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->44.74% (435,584B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->44.74% (435,584B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->44.74% (435,584B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->17.10% (166,476B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->17.10% (166,476B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->08.97% (87,296B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->08.97% (87,296B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->08.97% (87,296B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->02.45% (23,808B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.45% (23,808B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->02.45% (23,808B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.45% (23,808B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->02.45% (23,808B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.13% (11,040B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.13% (11,040B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.13% (11,040B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.03% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 46    279,640,119          977,056          747,924       229,132            0
+ 47    284,964,610          971,016          744,912       226,104            0
+ 48    291,492,949        1,018,472          787,508       230,964            0
+77.32% (787,508B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->44.88% (457,088B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->44.88% (457,088B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->44.88% (457,088B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->16.07% (163,716B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->16.07% (163,716B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->09.79% (99,704B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->09.79% (99,704B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->09.79% (99,704B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->02.67% (27,192B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.67% (27,192B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->02.67% (27,192B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->02.67% (27,192B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->02.67% (27,192B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.21% (12,352B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.21% (12,352B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.21% (12,352B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.03% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 49    298,770,689        1,169,784          909,572       260,212            0
+77.76% (909,572B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->43.59% (509,952B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->43.59% (509,952B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->43.59% (509,952B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->14.43% (168,852B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->14.43% (168,852B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->11.74% (137,368B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->11.74% (137,368B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->11.74% (137,368B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->03.20% (37,464B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->03.20% (37,464B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->03.20% (37,464B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->03.20% (37,464B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->03.20% (37,464B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.56% (18,208B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.56% (18,208B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.56% (18,208B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.02% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 50    299,084,818        1,182,768          919,344       263,424            0
+77.73% (919,344B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->43.57% (515,328B) 0x402E40: cdsl_dyn_array_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->43.57% (515,328B) 0x401603: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->43.57% (515,328B) 0x401317: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->14.48% (171,216B) 0x401431: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->14.48% (171,216B) 0x4012E9: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->11.72% (138,600B) 0x402CD4: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->11.72% (138,600B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->11.72% (138,600B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->03.20% (37,800B) 0x401519: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->03.20% (37,800B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   
+->03.20% (37,800B) 0x402B5C: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->03.20% (37,800B) 0x40157A: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->03.20% (37,800B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->01.55% (18,336B) 0x402D03: cdsl_dyn_array_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+| ->01.55% (18,336B) 0x401552: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+|   ->01.55% (18,336B) 0x401300: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+|     
+->00.02% (264B) in 1+ places, all below ms_print's threshold (01.00%)
+

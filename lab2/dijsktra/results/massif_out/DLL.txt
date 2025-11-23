@@ -1,0 +1,841 @@
+desc: --massif-out-file=results/massif_out/DLL.txt
+cmd: ./dijkstra input.dat
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=148968
+mem_heap_B=4808
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=6921149
+mem_heap_B=4820
+mem_heap_extra_B=68
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=8098408
+mem_heap_B=10364
+mem_heap_extra_B=4412
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=9091074
+mem_heap_B=7592
+mem_heap_extra_B=2240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=10689226
+mem_heap_B=10632
+mem_heap_extra_B=3816
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=11844570
+mem_heap_B=10560
+mem_heap_extra_B=3776
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=12831828
+mem_heap_B=8724
+mem_heap_extra_B=2348
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=13993059
+mem_heap_B=17064
+mem_heap_extra_B=8816
+mem_stacks_B=0
+heap_tree=peak
+n5: 17064 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7512 0x402BA7: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n2: 7512 0x40139F: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 7512 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+    n0: 7512 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5120 0x48FBF3C: _IO_file_doallocate (in /usr/lib/libc.so.6)
+  n2: 5120 0x490C1E5: _IO_doallocbuf (in /usr/lib/libc.so.6)
+   n1: 4096 0x4909CAE: _IO_file_underflow (in /usr/lib/libc.so.6)
+    n1: 4096 0x490C2D2: _IO_default_uflow (in /usr/lib/libc.so.6)
+     n1: 4096 0x48E3677: ??? (in /usr/lib/libc.so.6)
+      n1: 4096 0x48D641E: __isoc23_fscanf (in /usr/lib/libc.so.6)
+       n0: 4096 0x40179B: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 1024 0x490A058: _IO_file_overflow (in /usr/lib/libc.so.6)
+    n1: 1024 0x490AC7A: _IO_file_xsputn (in /usr/lib/libc.so.6)
+     n1: 1024 0x48D73E5: ??? (in /usr/lib/libc.so.6)
+      n1: 1024 0x48D74CB: ??? (in /usr/lib/libc.so.6)
+       n1: 1024 0x48E2DF4: ??? (in /usr/lib/libc.so.6)
+        n1: 1024 0x48D6B72: printf (in /usr/lib/libc.so.6)
+         n1: 1024 0x40169A: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+          n0: 1024 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n2: 3744 0x40132D: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 3744 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 3744 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 472 0x48FCB38: ??? (in /usr/lib/libc.so.6)
+  n0: 472 0x401766: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n0: 216 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=14935925
+mem_heap_B=11028
+mem_heap_extra_B=4156
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=16163143
+mem_heap_B=8472
+mem_heap_extra_B=2184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=17591444
+mem_heap_B=14916
+mem_heap_extra_B=7148
+mem_stacks_B=0
+heap_tree=detailed
+n5: 14916 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 6072 0x402BA7: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n2: 6072 0x40139F: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 6072 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+    n0: 6072 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5120 0x48FBF3C: _IO_file_doallocate (in /usr/lib/libc.so.6)
+  n2: 5120 0x490C1E5: _IO_doallocbuf (in /usr/lib/libc.so.6)
+   n1: 4096 0x4909CAE: _IO_file_underflow (in /usr/lib/libc.so.6)
+    n1: 4096 0x490C2D2: _IO_default_uflow (in /usr/lib/libc.so.6)
+     n1: 4096 0x48E3677: ??? (in /usr/lib/libc.so.6)
+      n1: 4096 0x48D641E: __isoc23_fscanf (in /usr/lib/libc.so.6)
+       n0: 4096 0x40179B: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 1024 0x490A058: _IO_file_overflow (in /usr/lib/libc.so.6)
+    n1: 1024 0x490AC7A: _IO_file_xsputn (in /usr/lib/libc.so.6)
+     n1: 1024 0x48D73E5: ??? (in /usr/lib/libc.so.6)
+      n1: 1024 0x48D74CB: ??? (in /usr/lib/libc.so.6)
+       n1: 1024 0x48E2DF4: ??? (in /usr/lib/libc.so.6)
+        n1: 1024 0x48D6B72: printf (in /usr/lib/libc.so.6)
+         n1: 1024 0x40169A: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+          n0: 1024 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n2: 3036 0x40132D: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 3036 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 3036 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 472 0x48FCB38: ??? (in /usr/lib/libc.so.6)
+  n0: 472 0x401766: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n0: 216 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=19543730
+mem_heap_B=7248
+mem_heap_extra_B=1200
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=20601209
+mem_heap_B=14844
+mem_heap_extra_B=7092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=21504475
+mem_heap_B=10128
+mem_heap_extra_B=3424
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=22856479
+mem_heap_B=7320
+mem_heap_extra_B=1304
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=23760990
+mem_heap_B=15492
+mem_heap_extra_B=7612
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=25115868
+mem_heap_B=8256
+mem_heap_extra_B=1968
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=27066821
+mem_heap_B=12612
+mem_heap_extra_B=5356
+mem_stacks_B=0
+heap_tree=detailed
+n6: 12612 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x48FBF3C: _IO_file_doallocate (in /usr/lib/libc.so.6)
+  n2: 5120 0x490C1E5: _IO_doallocbuf (in /usr/lib/libc.so.6)
+   n1: 4096 0x4909CAE: _IO_file_underflow (in /usr/lib/libc.so.6)
+    n1: 4096 0x490C2D2: _IO_default_uflow (in /usr/lib/libc.so.6)
+     n1: 4096 0x48E3677: ??? (in /usr/lib/libc.so.6)
+      n1: 4096 0x48D641E: __isoc23_fscanf (in /usr/lib/libc.so.6)
+       n0: 4096 0x40179B: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 1024 0x490A058: _IO_file_overflow (in /usr/lib/libc.so.6)
+    n1: 1024 0x490AC7A: _IO_file_xsputn (in /usr/lib/libc.so.6)
+     n1: 1024 0x48D73E5: ??? (in /usr/lib/libc.so.6)
+      n1: 1024 0x48D74CB: ??? (in /usr/lib/libc.so.6)
+       n1: 1024 0x48E2DF4: ??? (in /usr/lib/libc.so.6)
+        n1: 1024 0x48D6B72: printf (in /usr/lib/libc.so.6)
+         n1: 1024 0x40169A: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+          n0: 1024 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n1: 4536 0x402BA7: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n2: 4536 0x40139F: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 4536 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+    n0: 4536 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 2268 0x40132D: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 2268 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 2268 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 472 0x48FCB38: ??? (in /usr/lib/libc.so.6)
+  n0: 472 0x401766: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n1: 216 0x401841: cdsl_deque_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 216 0x40194B: cdsl_dll_init (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 216 0x401742: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=28268799
+mem_heap_B=8256
+mem_heap_extra_B=1968
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=29173421
+mem_heap_B=6132
+mem_heap_extra_B=316
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=30529136
+mem_heap_B=10416
+mem_heap_extra_B=3664
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=31577492
+mem_heap_B=6744
+mem_heap_extra_B=808
+mem_stacks_B=0
+heap_tree=detailed
+n6: 6744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x48FBF3C: _IO_file_doallocate (in /usr/lib/libc.so.6)
+  n2: 5120 0x490C1E5: _IO_doallocbuf (in /usr/lib/libc.so.6)
+   n1: 4096 0x4909CAE: _IO_file_underflow (in /usr/lib/libc.so.6)
+    n1: 4096 0x490C2D2: _IO_default_uflow (in /usr/lib/libc.so.6)
+     n1: 4096 0x48E3677: ??? (in /usr/lib/libc.so.6)
+      n1: 4096 0x48D641E: __isoc23_fscanf (in /usr/lib/libc.so.6)
+       n0: 4096 0x40179B: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 1024 0x490A058: _IO_file_overflow (in /usr/lib/libc.so.6)
+    n1: 1024 0x490AC7A: _IO_file_xsputn (in /usr/lib/libc.so.6)
+     n1: 1024 0x48D73E5: ??? (in /usr/lib/libc.so.6)
+      n1: 1024 0x48D74CB: ??? (in /usr/lib/libc.so.6)
+       n1: 1024 0x48E2DF4: ??? (in /usr/lib/libc.so.6)
+        n1: 1024 0x48D6B72: printf (in /usr/lib/libc.so.6)
+         n1: 1024 0x40169A: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+          n0: 1024 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n1: 624 0x402BA7: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n2: 624 0x40139F: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 624 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+    n0: 624 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 472 0x48FCB38: ??? (in /usr/lib/libc.so.6)
+  n0: 472 0x401766: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n2: 312 0x40132D: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 312 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 312 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 216 0x401841: cdsl_deque_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 216 0x40194B: cdsl_dll_init (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 216 0x401742: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=32933479
+mem_heap_B=12180
+mem_heap_extra_B=5020
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=33690451
+mem_heap_B=9372
+mem_heap_extra_B=2884
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=34892890
+mem_heap_B=15816
+mem_heap_extra_B=7848
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=35648212
+mem_heap_B=12252
+mem_heap_extra_B=5076
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=37450358
+mem_heap_B=5976
+mem_heap_extra_B=208
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=38515095
+mem_heap_B=12324
+mem_heap_extra_B=5132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=39720117
+mem_heap_B=7680
+mem_heap_extra_B=1504
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=40620624
+mem_heap_B=14808
+mem_heap_extra_B=7064
+mem_stacks_B=0
+heap_tree=detailed
+n5: 14808 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 6000 0x402BA7: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n2: 6000 0x40139F: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 6000 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+    n0: 6000 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 5120 0x48FBF3C: _IO_file_doallocate (in /usr/lib/libc.so.6)
+  n2: 5120 0x490C1E5: _IO_doallocbuf (in /usr/lib/libc.so.6)
+   n1: 4096 0x4909CAE: _IO_file_underflow (in /usr/lib/libc.so.6)
+    n1: 4096 0x490C2D2: _IO_default_uflow (in /usr/lib/libc.so.6)
+     n1: 4096 0x48E3677: ??? (in /usr/lib/libc.so.6)
+      n1: 4096 0x48D641E: __isoc23_fscanf (in /usr/lib/libc.so.6)
+       n0: 4096 0x40179B: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 1024 0x490A058: _IO_file_overflow (in /usr/lib/libc.so.6)
+    n1: 1024 0x490AC7A: _IO_file_xsputn (in /usr/lib/libc.so.6)
+     n1: 1024 0x48D73E5: ??? (in /usr/lib/libc.so.6)
+      n1: 1024 0x48D74CB: ??? (in /usr/lib/libc.so.6)
+       n1: 1024 0x48E2DF4: ??? (in /usr/lib/libc.so.6)
+        n1: 1024 0x48D6B72: printf (in /usr/lib/libc.so.6)
+         n1: 1024 0x40169A: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+          n0: 1024 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n2: 3000 0x40132D: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 3000 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 3000 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 472 0x48FCB38: ??? (in /usr/lib/libc.so.6)
+  n0: 472 0x401766: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n0: 216 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=42429868
+mem_heap_B=8400
+mem_heap_extra_B=2080
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=43631423
+mem_heap_B=12780
+mem_heap_extra_B=5484
+mem_stacks_B=0
+heap_tree=detailed
+n6: 12780 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x48FBF3C: _IO_file_doallocate (in /usr/lib/libc.so.6)
+  n2: 5120 0x490C1E5: _IO_doallocbuf (in /usr/lib/libc.so.6)
+   n1: 4096 0x4909CAE: _IO_file_underflow (in /usr/lib/libc.so.6)
+    n1: 4096 0x490C2D2: _IO_default_uflow (in /usr/lib/libc.so.6)
+     n1: 4096 0x48E3677: ??? (in /usr/lib/libc.so.6)
+      n1: 4096 0x48D641E: __isoc23_fscanf (in /usr/lib/libc.so.6)
+       n0: 4096 0x40179B: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 1024 0x490A058: _IO_file_overflow (in /usr/lib/libc.so.6)
+    n1: 1024 0x490AC7A: _IO_file_xsputn (in /usr/lib/libc.so.6)
+     n1: 1024 0x48D73E5: ??? (in /usr/lib/libc.so.6)
+      n1: 1024 0x48D74CB: ??? (in /usr/lib/libc.so.6)
+       n1: 1024 0x48E2DF4: ??? (in /usr/lib/libc.so.6)
+        n1: 1024 0x48D6B72: printf (in /usr/lib/libc.so.6)
+         n1: 1024 0x40169A: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+          n0: 1024 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n1: 4656 0x402BA7: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n2: 4656 0x40139F: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 4656 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+    n0: 4656 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 2316 0x40132D: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 2316 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 2316 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 472 0x48FCB38: ??? (in /usr/lib/libc.so.6)
+  n0: 472 0x401766: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n1: 216 0x401841: cdsl_deque_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 216 0x40194B: cdsl_dll_init (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 216 0x401742: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=44836279
+mem_heap_B=11172
+mem_heap_extra_B=4236
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=45589041
+mem_heap_B=9048
+mem_heap_extra_B=2584
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=46793439
+mem_heap_B=6132
+mem_heap_extra_B=316
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=48144000
+mem_heap_B=12072
+mem_heap_extra_B=4968
+mem_stacks_B=0
+heap_tree=detailed
+n6: 12072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x48FBF3C: _IO_file_doallocate (in /usr/lib/libc.so.6)
+  n2: 5120 0x490C1E5: _IO_doallocbuf (in /usr/lib/libc.so.6)
+   n1: 4096 0x4909CAE: _IO_file_underflow (in /usr/lib/libc.so.6)
+    n1: 4096 0x490C2D2: _IO_default_uflow (in /usr/lib/libc.so.6)
+     n1: 4096 0x48E3677: ??? (in /usr/lib/libc.so.6)
+      n1: 4096 0x48D641E: __isoc23_fscanf (in /usr/lib/libc.so.6)
+       n0: 4096 0x40179B: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 1024 0x490A058: _IO_file_overflow (in /usr/lib/libc.so.6)
+    n1: 1024 0x490AC7A: _IO_file_xsputn (in /usr/lib/libc.so.6)
+     n1: 1024 0x48D73E5: ??? (in /usr/lib/libc.so.6)
+      n1: 1024 0x48D74CB: ??? (in /usr/lib/libc.so.6)
+       n1: 1024 0x48E2DF4: ??? (in /usr/lib/libc.so.6)
+        n1: 1024 0x48D6B72: printf (in /usr/lib/libc.so.6)
+         n1: 1024 0x40169A: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+          n0: 1024 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n1: 4176 0x402BA7: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n2: 4176 0x40139F: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 4176 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+    n0: 4176 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 2088 0x40132D: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 2088 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 2088 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 472 0x48FCB38: ??? (in /usr/lib/libc.so.6)
+  n0: 472 0x401766: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n1: 216 0x401841: cdsl_deque_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 216 0x40194B: cdsl_dll_init (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 216 0x401742: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=49948027
+mem_heap_B=13692
+mem_heap_extra_B=6212
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=51002983
+mem_heap_B=11964
+mem_heap_extra_B=4900
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=52210909
+mem_heap_B=7752
+mem_heap_extra_B=1608
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=53260992
+mem_heap_B=13548
+mem_heap_extra_B=6084
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=54317146
+mem_heap_B=11784
+mem_heap_extra_B=4728
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=55369224
+mem_heap_B=6420
+mem_heap_extra_B=556
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=56721569
+mem_heap_B=12108
+mem_heap_extra_B=4980
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=58078069
+mem_heap_B=8148
+mem_heap_extra_B=1884
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=59432963
+mem_heap_B=5952
+mem_heap_extra_B=176
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=60940022
+mem_heap_B=10164
+mem_heap_extra_B=3452
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=62295588
+mem_heap_B=6672
+mem_heap_extra_B=736
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=64108441
+mem_heap_B=10092
+mem_heap_extra_B=3396
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=65008499
+mem_heap_B=6816
+mem_heap_extra_B=832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=65160151
+mem_heap_B=6312
+mem_heap_extra_B=472
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=65309175
+mem_heap_B=6024
+mem_heap_extra_B=216
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=65458260
+mem_heap_B=12360
+mem_heap_extra_B=5160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=65610138
+mem_heap_B=15060
+mem_heap_extra_B=7260
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=65762550
+mem_heap_B=15276
+mem_heap_extra_B=7428
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=65911782
+mem_heap_B=14412
+mem_heap_extra_B=6740
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=66062190
+mem_heap_B=13116
+mem_heap_extra_B=5748
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=66212148
+mem_heap_B=12360
+mem_heap_extra_B=5160
+mem_stacks_B=0
+heap_tree=detailed
+n6: 12360 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x48FBF3C: _IO_file_doallocate (in /usr/lib/libc.so.6)
+  n2: 5120 0x490C1E5: _IO_doallocbuf (in /usr/lib/libc.so.6)
+   n1: 4096 0x4909CAE: _IO_file_underflow (in /usr/lib/libc.so.6)
+    n1: 4096 0x490C2D2: _IO_default_uflow (in /usr/lib/libc.so.6)
+     n1: 4096 0x48E3677: ??? (in /usr/lib/libc.so.6)
+      n1: 4096 0x48D641E: __isoc23_fscanf (in /usr/lib/libc.so.6)
+       n0: 4096 0x40179B: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 1024 0x490A058: _IO_file_overflow (in /usr/lib/libc.so.6)
+    n1: 1024 0x490AC7A: _IO_file_xsputn (in /usr/lib/libc.so.6)
+     n1: 1024 0x48D73E5: ??? (in /usr/lib/libc.so.6)
+      n1: 1024 0x48D74CB: ??? (in /usr/lib/libc.so.6)
+       n1: 1024 0x48E2DF4: ??? (in /usr/lib/libc.so.6)
+        n1: 1024 0x48D6B72: printf (in /usr/lib/libc.so.6)
+         n1: 1024 0x40169A: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+          n0: 1024 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n1: 4368 0x402BA7: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n2: 4368 0x40139F: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 4368 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+    n0: 4368 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 2184 0x40132D: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 2184 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 2184 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 472 0x48FCB38: ??? (in /usr/lib/libc.so.6)
+  n0: 472 0x401766: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n1: 216 0x401841: cdsl_deque_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 216 0x40194B: cdsl_dll_init (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 216 0x401742: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=66361622
+mem_heap_B=11532
+mem_heap_extra_B=4516
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=66511338
+mem_heap_B=10740
+mem_heap_extra_B=3900
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=66662022
+mem_heap_B=10092
+mem_heap_extra_B=3396
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=66814676
+mem_heap_B=10344
+mem_heap_extra_B=3592
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=66966294
+mem_heap_B=9228
+mem_heap_extra_B=2724
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=67115802
+mem_heap_B=9012
+mem_heap_extra_B=2556
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=67266486
+mem_heap_B=8364
+mem_heap_extra_B=2068
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=67415752
+mem_heap_B=8112
+mem_heap_extra_B=1888
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=67566678
+mem_heap_B=7500
+mem_heap_extra_B=1444
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=67718572
+mem_heap_B=7032
+mem_heap_extra_B=1064
+mem_stacks_B=0
+heap_tree=detailed
+n6: 7032 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x48FBF3C: _IO_file_doallocate (in /usr/lib/libc.so.6)
+  n2: 5120 0x490C1E5: _IO_doallocbuf (in /usr/lib/libc.so.6)
+   n1: 4096 0x4909CAE: _IO_file_underflow (in /usr/lib/libc.so.6)
+    n1: 4096 0x490C2D2: _IO_default_uflow (in /usr/lib/libc.so.6)
+     n1: 4096 0x48E3677: ??? (in /usr/lib/libc.so.6)
+      n1: 4096 0x48D641E: __isoc23_fscanf (in /usr/lib/libc.so.6)
+       n0: 4096 0x40179B: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 1024 0x490A058: _IO_file_overflow (in /usr/lib/libc.so.6)
+    n1: 1024 0x490AC7A: _IO_file_xsputn (in /usr/lib/libc.so.6)
+     n1: 1024 0x48D73E5: ??? (in /usr/lib/libc.so.6)
+      n1: 1024 0x48D74CB: ??? (in /usr/lib/libc.so.6)
+       n1: 1024 0x48E2DF4: ??? (in /usr/lib/libc.so.6)
+        n1: 1024 0x48D6B72: printf (in /usr/lib/libc.so.6)
+         n1: 1024 0x40169A: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+          n0: 1024 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n1: 816 0x402BA7: cdsl_deque_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n2: 816 0x40139F: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n1: 816 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+    n0: 816 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 472 0x48FCB38: ??? (in /usr/lib/libc.so.6)
+  n0: 472 0x401766: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n2: 408 0x40132D: enqueue (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 408 0x401642: dijkstra (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 408 0x401817: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 216 0x401841: cdsl_deque_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+  n1: 216 0x40194B: cdsl_dll_init (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+   n0: 216 0x401742: main (in /home/panos/dev/embedded/lab2/dijsktra/dijkstra)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=68
+#-----------
+time=67870742
+mem_heap_B=7212
+mem_heap_extra_B=1156
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=68019974
+mem_heap_B=6348
+mem_heap_extra_B=484
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=68169282
+mem_heap_B=5988
+mem_heap_extra_B=188
+mem_stacks_B=0
+heap_tree=empty

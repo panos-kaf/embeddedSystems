@@ -1,0 +1,1155 @@
+desc: --massif-out-file=results/massif_out/SLL_CL_SLL_PK.txt
+cmd: ./drr
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=298731
+mem_heap_B=6272
+mem_heap_extra_B=1200
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=821305
+mem_heap_B=23080
+mem_heap_extra_B=4968
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=1197397
+mem_heap_B=27508
+mem_heap_extra_B=6876
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=1713141
+mem_heap_B=52484
+mem_heap_extra_B=18380
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=2317807
+mem_heap_B=93424
+mem_heap_extra_B=47880
+mem_stacks_B=0
+heap_tree=detailed
+n5: 93424 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 35232 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 32688 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 32688 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 2352 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 2352 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 28416 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 28416 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 28224 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 28224 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 26208 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 26208 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n1: 3528 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 3528 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 40 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=3035188
+mem_heap_B=51412
+mem_heap_extra_B=21116
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=3693518
+mem_heap_B=91812
+mem_heap_extra_B=48412
+mem_stacks_B=0
+heap_tree=detailed
+n5: 91812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 31236 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 31236 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n1: 31104 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 31104 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 30912 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 30912 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n3: 25568 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 22800 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 22800 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 2576 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 2576 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 3864 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 3864 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 40 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=4127992
+mem_heap_B=97836
+mem_heap_extra_B=53740
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=4665833
+mem_heap_B=71368
+mem_heap_extra_B=35672
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=5251769
+mem_heap_B=76672
+mem_heap_extra_B=34160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=5806676
+mem_heap_B=89536
+mem_heap_extra_B=36080
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=6371724
+mem_heap_B=105092
+mem_heap_extra_B=38804
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=6685886
+mem_heap_B=110376
+mem_heap_extra_B=41904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=7188514
+mem_heap_B=126416
+mem_heap_extra_B=51296
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=7963439
+mem_heap_B=117916
+mem_heap_extra_B=43316
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=8466542
+mem_heap_B=125864
+mem_heap_extra_B=47696
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=8888692
+mem_heap_B=135824
+mem_heap_extra_B=53928
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=9329694
+mem_heap_B=136104
+mem_heap_extra_B=51944
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=9833249
+mem_heap_B=147116
+mem_heap_extra_B=53804
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=10207955
+mem_heap_B=167788
+mem_heap_extra_B=62932
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=10748400
+mem_heap_B=164608
+mem_heap_extra_B=61760
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=11065788
+mem_heap_B=173672
+mem_heap_extra_B=65680
+mem_stacks_B=0
+heap_tree=detailed
+n5: 173672 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 98496 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 98496 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 98304 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 98304 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 42624 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 42624 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 20208 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 11472 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 11472 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 8192 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 8192 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 544 in 1 place, below massif's threshold (1.00%)
+ n1: 12288 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 12288 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 56 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=11618682
+mem_heap_B=215500
+mem_heap_extra_B=95420
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=12073461
+mem_heap_B=194744
+mem_heap_extra_B=82600
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=12576596
+mem_heap_B=186888
+mem_heap_extra_B=75648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=13331520
+mem_heap_B=185736
+mem_heap_extra_B=76512
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=13709086
+mem_heap_B=200904
+mem_heap_extra_B=85456
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=14212566
+mem_heap_B=202232
+mem_heap_extra_B=84992
+mem_stacks_B=0
+heap_tree=detailed
+n5: 202232 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 106752 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 106752 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 106560 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 106560 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 59880 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 59880 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 22240 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 12768 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 12768 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 8880 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 8880 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 592 in 1 place, below massif's threshold (1.00%)
+ n1: 13320 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 13320 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 40 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=14715854
+mem_heap_B=201816
+mem_heap_extra_B=83128
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=15345215
+mem_heap_B=216652
+mem_heap_extra_B=91396
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=16100436
+mem_heap_B=219020
+mem_heap_extra_B=87404
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=16794024
+mem_heap_B=258712
+mem_heap_extra_B=113104
+mem_stacks_B=0
+heap_tree=detailed
+n5: 258712 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 125952 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 125952 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 125760 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 125760 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 76296 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 76296 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 40688 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 29504 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 29504 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 10480 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 10480 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 704 in 1 place, below massif's threshold (1.00%)
+ n1: 15720 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 15720 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 56 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=17297372
+mem_heap_B=235252
+mem_heap_extra_B=98356
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=17738864
+mem_heap_B=266572
+mem_heap_extra_B=120692
+mem_stacks_B=0
+heap_tree=detailed
+n5: 266572 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 126336 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 126336 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 126144 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 126144 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 83916 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 83916 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 40512 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 29312 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 29312 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 10512 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 10512 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 688 in 1 place, below massif's threshold (1.00%)
+ n1: 15768 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 15768 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 40 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=35
+#-----------
+time=18350763
+mem_heap_B=242728
+mem_heap_extra_B=103864
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=18962432
+mem_heap_B=252004
+mem_heap_extra_B=107132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=19370234
+mem_heap_B=265548
+mem_heap_extra_B=110268
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=19778287
+mem_heap_B=274860
+mem_heap_extra_B=111060
+mem_stacks_B=0
+heap_tree=detailed
+n5: 274860 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 151872 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 151872 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 151680 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 151680 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 78708 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 78708 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 25280 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 12640 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 12640 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 11808 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 11808 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 832 in 1 place, below massif's threshold (1.00%)
+ n1: 18960 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 18960 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 40 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=39
+#-----------
+time=20445752
+mem_heap_B=290048
+mem_heap_extra_B=116568
+mem_stacks_B=0
+heap_tree=detailed
+n5: 290048 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 159744 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 159744 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 159552 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 159552 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 81360 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 81360 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 28944 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 14768 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 14768 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 13296 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 13296 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 880 in 1 place, below massif's threshold (1.00%)
+ n1: 19944 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 19944 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 56 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=20860355
+mem_heap_B=293436
+mem_heap_extra_B=116500
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=21498616
+mem_heap_B=324208
+mem_heap_extra_B=131496
+mem_stacks_B=0
+heap_tree=detailed
+n5: 324208 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 173760 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 173760 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 173568 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 173568 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 89352 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 89352 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 39344 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 23904 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 23904 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 14464 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 14464 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 976 in 1 place, below massif's threshold (1.00%)
+ n1: 21696 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 21696 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 56 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=21912205
+mem_heap_B=354124
+mem_heap_extra_B=153036
+mem_stacks_B=0
+heap_tree=detailed
+n5: 354124 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 173760 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 173760 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 173568 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 173568 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 102516 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 102516 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 56112 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 40688 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 40688 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 14464 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 14464 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 960 in 1 place, below massif's threshold (1.00%)
+ n1: 21696 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 21696 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 40 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=22692014
+mem_heap_B=405304
+mem_heap_extra_B=189936
+mem_stacks_B=0
+heap_tree=detailed
+n5: 405304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 173760 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 173760 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 173568 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 173568 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 125136 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 125136 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 84672 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 69248 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 69248 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 14464 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 14464 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 960 in 1 place, below massif's threshold (1.00%)
+ n1: 21696 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 21696 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 40 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=23170257
+mem_heap_B=431940
+mem_heap_extra_B=208948
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=23691946
+mem_heap_B=461476
+mem_heap_extra_B=230556
+mem_stacks_B=0
+heap_tree=detailed
+n5: 461476 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 174144 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 174144 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 173952 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 173952 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 150540 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 150540 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 115008 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 99552 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 99552 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 14496 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 14496 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 960 in 1 place, below massif's threshold (1.00%)
+ n1: 21744 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 21744 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 40 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=24083005
+mem_heap_B=479376
+mem_heap_extra_B=243856
+mem_stacks_B=0
+heap_tree=detailed
+n5: 479376 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 174144 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 174144 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 173952 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 173952 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 159240 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 159240 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 124208 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 108752 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 108752 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 14496 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 14496 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 960 in 1 place, below massif's threshold (1.00%)
+ n1: 21744 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 21744 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 40 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=24491101
+mem_heap_B=454508
+mem_heap_extra_B=229460
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=24899049
+mem_heap_B=430208
+mem_heap_extra_B=215432
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=25307058
+mem_heap_B=405912
+mem_heap_extra_B=201160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=25605903
+mem_heap_B=387832
+mem_heap_extra_B=190224
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=25904676
+mem_heap_B=368268
+mem_heap_extra_B=177724
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=26203420
+mem_heap_B=360976
+mem_heap_extra_B=172104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=26504634
+mem_heap_B=363764
+mem_heap_extra_B=172316
+mem_stacks_B=0
+heap_tree=detailed
+n5: 363764 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 177408 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 177408 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 177216 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 177216 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 134628 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 134628 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 29536 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 14768 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 14768 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 13808 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 13808 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 960 in 1 place, below massif's threshold (1.00%)
+ n1: 22152 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 22152 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 40 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=26803547
+mem_heap_B=377444
+mem_heap_extra_B=179492
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=27102413
+mem_heap_B=392960
+mem_heap_extra_B=190832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=27401162
+mem_heap_B=406632
+mem_heap_extra_B=200944
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=27699998
+mem_heap_B=418048
+mem_heap_extra_B=209544
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=27999027
+mem_heap_B=399400
+mem_heap_extra_B=197712
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=28297851
+mem_heap_B=379704
+mem_heap_extra_B=184072
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=28596662
+mem_heap_B=387348
+mem_heap_extra_B=187996
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=28895550
+mem_heap_B=393564
+mem_heap_extra_B=192460
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=29194355
+mem_heap_B=399152
+mem_heap_extra_B=196280
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=29493182
+mem_heap_B=394736
+mem_heap_extra_B=192968
+mem_stacks_B=0
+heap_tree=detailed
+n5: 394736 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 186816 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 186816 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 186624 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 186624 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 153192 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 153192 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 31360 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 15552 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 15552 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 14816 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 14816 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 992 in 1 place, below massif's threshold (1.00%)
+ n1: 23328 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 23328 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 40 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=64
+#-----------
+time=29791998
+mem_heap_B=411080
+mem_heap_extra_B=202040
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=30090883
+mem_heap_B=432492
+mem_heap_extra_B=217204
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=30389616
+mem_heap_B=436012
+mem_heap_extra_B=220420
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=30688378
+mem_heap_B=417920
+mem_heap_extra_B=208968
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=30987386
+mem_heap_B=410212
+mem_heap_extra_B=202036
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=31286216
+mem_heap_B=423444
+mem_heap_extra_B=204764
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=31585013
+mem_heap_B=424468
+mem_heap_extra_B=204724
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=31883816
+mem_heap_B=428324
+mem_heap_extra_B=205980
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=32182673
+mem_heap_B=432340
+mem_heap_extra_B=207148
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=32481546
+mem_heap_B=437504
+mem_heap_extra_B=208792
+mem_stacks_B=0
+heap_tree=detailed
+n5: 437504 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 211392 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 211392 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 211200 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 211200 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 163512 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 163512 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 36144 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 17600 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 17600 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 17408 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 17408 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 1136 in 1 place, below massif's threshold (1.00%)
+ n1: 26400 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 26400 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 56 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=74
+#-----------
+time=32780370
+mem_heap_B=444840
+mem_heap_extra_B=209664
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=33079129
+mem_heap_B=453320
+mem_heap_extra_B=211888
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=33377914
+mem_heap_B=461756
+mem_heap_extra_B=212860
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=33676692
+mem_heap_B=473800
+mem_heap_extra_B=214784
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=33975476
+mem_heap_B=482576
+mem_heap_extra_B=216280
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=34274351
+mem_heap_B=493836
+mem_heap_extra_B=218172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=34534513
+mem_heap_B=510144
+mem_heap_extra_B=223920
+mem_stacks_B=0
+heap_tree=detailed
+n5: 510144 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 263424 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 263424 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 263232 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 263232 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 166656 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 166656 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 47104 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 23808 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 23808 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 21936 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 21936 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 1360 in 1 place, below massif's threshold (1.00%)
+ n1: 32904 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 32904 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 56 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=81
+#-----------
+time=34833354
+mem_heap_B=517252
+mem_heap_extra_B=226604
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=34856333
+mem_heap_B=519156
+mem_heap_extra_B=227964
+mem_stacks_B=0
+heap_tree=detailed
+n5: 519156 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 266880 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 266880 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 266688 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 266688 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 168756 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 168756 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 50128 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 26544 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 26544 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 22224 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 22224 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 1360 in 1 place, below massif's threshold (1.00%)
+ n1: 33336 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 33336 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 56 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=83
+#-----------
+time=35014312
+mem_heap_B=529736
+mem_heap_extra_B=235384
+mem_stacks_B=0
+heap_tree=detailed
+n5: 529736 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 267072 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 267072 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 266880 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 266880 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 173184 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 173184 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 56064 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 32464 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 32464 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 22240 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 22240 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 1360 in 1 place, below massif's threshold (1.00%)
+ n1: 33360 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 33360 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 56 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=84
+#-----------
+time=35313209
+mem_heap_B=514936
+mem_heap_extra_B=225128
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=35611968
+mem_heap_B=526672
+mem_heap_extra_B=227336
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=35910900
+mem_heap_B=534696
+mem_heap_extra_B=228408
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=36161389
+mem_heap_B=543004
+mem_heap_extra_B=229820
+mem_stacks_B=0
+heap_tree=detailed
+n5: 543004 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 289728 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 289728 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 289536 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 289536 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 168612 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 168612 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 48416 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 24128 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 24128 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 22384 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 22384 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 1904 in 1 place, below massif's threshold (1.00%)
+ n1: 36192 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 36192 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 56 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=88
+#-----------
+time=36231051
+mem_heap_B=548432
+mem_heap_extra_B=233560
+mem_stacks_B=0
+heap_tree=detailed
+n5: 548432 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 289920 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 289920 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 289728 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 289728 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 170832 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 170832 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 51408 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 25360 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 25360 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 24144 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 24144 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 1904 in 1 place, below massif's threshold (1.00%)
+ n1: 36216 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 36216 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 56 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=89
+#-----------
+time=36529883
+mem_heap_B=550384
+mem_heap_extra_B=231032
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=36702908
+mem_heap_B=558232
+mem_heap_extra_B=233496
+mem_stacks_B=0
+heap_tree=detailed
+n5: 558232 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 299904 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 299904 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 299712 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 299712 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 169608 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 169608 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 51200 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 24976 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 24976 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 24272 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 24272 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 1952 in 1 place, below massif's threshold (1.00%)
+ n1: 37464 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 37464 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 56 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=91
+#-----------
+time=36932951
+mem_heap_B=567272
+mem_heap_extra_B=238152
+mem_stacks_B=0
+heap_tree=detailed
+n5: 567272 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 302592 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 302592 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 302400 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 302400 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 172200 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 172200 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 54624 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 27456 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 27456 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 25200 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 25200 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 1968 in 1 place, below massif's threshold (1.00%)
+ n1: 37800 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 37800 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 56 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=92
+#-----------
+time=37060248
+mem_heap_B=574544
+mem_heap_extra_B=243432
+mem_stacks_B=0
+heap_tree=peak
+n5: 574544 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 302592 0x401847: cdsl_queue_list_lock_based_pthread_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n2: 302592 0x40194F: cdsl_sll_init (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n1: 302400 0x4015A2: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+    n0: 302400 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 175488 0x401481: get_next_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 175488 0x401339: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n3: 58624 0x40196E: cdsl_queue_list_lock_based_pthread_enqueue (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 31472 0x401653: insert_packet (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 31472 0x401367: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n1: 25200 0x4015CA: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+   n0: 25200 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 1952 in 1 place, below massif's threshold (1.00%)
+ n1: 37800 0x401569: find_node (in /home/panos/dev/embedded/lab2/DRR/drr)
+  n0: 37800 0x401350: main (in /home/panos/dev/embedded/lab2/DRR/drr)
+ n0: 40 in 2 places, all below massif's threshold (1.00%)

@@ -3,7 +3,7 @@ import os
 import matplotlib.pyplot as plt
 
 # Get all files matching the pattern
-files = glob.glob("numMemAccesses_*.txt")
+files = glob.glob("*.txt")
 
 data = {}
 types = []
@@ -11,7 +11,7 @@ types = []
 for fname in files:
     base = os.path.basename(fname)
     # Extract TYPE from filename: remove prefix and suffix
-    type_name = base.replace("numMemAccesses_", "").replace(".txt", "")
+    type_name = base.replace(".txt", "")
     types.append(type_name)
 
     # Read the single integer from the file
