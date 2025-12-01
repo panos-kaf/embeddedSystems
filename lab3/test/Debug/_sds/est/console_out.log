@@ -1,7 +1,0 @@
-  For graph with functions: calcDistancesHW:main.cpp:169
-    Estimated hardware latency = 3092550
-  Estimated resource usage:
-    dsps used = 5/80
-    bram used = 33/60
-    luts used = 1652/17600
-    FFs used = 1060/35200

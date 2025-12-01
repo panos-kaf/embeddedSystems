@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xd" xd:functionName="calcDistancesHW" xd:componentRef="calcDistancesHW" xd:initiationInterval="475205" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
-  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
-  <xd:arg xd:name="*(data_hw)" xd:originalName="data_hw" xd:direction="in" xd:interfaceRef="data_hw" xd:busTypeRef="acc_fifo" xd:dataWidth="32"/>
-  <xd:arg xd:name="*(dists_hw)" xd:originalName="dists_hw" xd:direction="out" xd:interfaceRef="dists_hw" xd:busTypeRef="acc_fifo" xd:dataWidth="32"/>
-  <xd:latencyEstimates xd:best-case="475204" xd:worst-case="475204" xd:average-case="475204"/>
-  <xd:resourceEstimates xd:LUT="1652" xd:FF="1060" xd:BRAM="67" xd:DSP="5"/>
-</xd:acceleratorMap>
