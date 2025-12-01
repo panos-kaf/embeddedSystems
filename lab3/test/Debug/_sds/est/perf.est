@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<est:Report xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:est="http://www.xilinx.com/est">
+  <graph hwLatency="3092550">
+    <function name="calcDistancesHW" file="main.cpp" line="169"/>
+  </graph>
+  <resources>
+    <resource name="dsp" used="5" total="80"/>
+    <resource name="bram" used="33" total="60"/>
+    <resource name="lut" used="1652" total="17600"/>
+    <resource name="ff" used="1060" total="35200"/>
+  </resources>
+</est:Report>

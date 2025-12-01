@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table, th, td
+    {
+      border-collapse:collapse;
+      border:1px solid black;
+    }
+    th, td
+    {
+      padding:5px;
+    }
+    p
+    {
+      font-size:200%
+    }
+  </style>
+  <title> Data Motion Network Report </title>
+</head>
+<body>
+<p>Partition 0</p>
+<table>
+<caption><b><font size="5">Data Motion Network</font></b></caption>
+<tr>
+<th>Accelerator</th>
+<th>Argument</th>
+<th>IP Port</th>
+<th>Direction</th>
+<th>Declared Size(bytes)</th>
+<th>Pragmas</th>
+<th>Connection</th>
+</tr>
+<tr>
+<td>calcDistancesHW_1</td>
+<td>data_hw</td>
+<td>data_hw</td>
+<td>IN</td>
+<td>0*4</td>
+<td><ul>
+<li>length:(32768)</li>
+</ul>
+</td>
+<td>ps7_S_AXI_ACP:AXIDMA_SIMPLE</td>
+</tr>
+<td></td>
+<td>dists_hw</td>
+<td>dists_hw</td>
+<td>OUT</td>
+<td>0*4</td>
+<td><ul>
+<li>length:(32)</li>
+</ul>
+</td>
+<td>ps7_S_AXI_ACP:AXIDMA_SIMPLE</td>
+</tr>
+</table>
+
+<table>
+<caption><b><font size="5">Accelerator Callsites</font></b></caption>
+<tr>
+<th>Accelerator</th>
+<th>Callsite</th>
+<th>IP Port</th>
+<th>Transfer Size(bytes)</th>
+<th>Paged or Contiguous</th>
+<th>Datamover Setup Time(CPU cycles)</th>
+<th>Transfer Time(CPU cycles)</th>
+</tr>
+<tr>
+<td>calcDistancesHW_1</td>
+<td>main.cpp:169:3</td>
+<td>data_hw</td>
+<td>(32768) * 4</td>
+<td>contiguous</td>
+<td>1124</td>
+<td>219540</td>
+</tr>
+<td></td>
+<td></td>
+<td>dists_hw</td>
+<td>(32) * 4</td>
+<td>contiguous</td>
+<td>1132</td>
+<td>1910</td>
+</tr>
+</table>
+</body>
+</html>

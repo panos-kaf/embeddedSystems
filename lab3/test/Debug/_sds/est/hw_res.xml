@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<cf:model cf:name="top" xd:type="design" xmlns:xd="http://www.xilinx.com/xd" xmlns:cf="http://www.xilinx.com/connections">
+  <xd:device xd:BRAM="60" xd:DSP="80" xd:FF="35200" xd:LUTs="17600"/>
+  <xd:comp xd:name="dm_0" xd:componentRef="axi_dma" xd:BRAM="0" xd:DSP="0" xd:FF="0" xd:LUTs="0"/>
+  <xd:comp xd:name="dm_1" xd:componentRef="axi_dma" xd:BRAM="0" xd:DSP="0" xd:FF="0" xd:LUTs="0"/>
+  <xd:comp xd:name="zybo" xd:componentRef="zybo" xd:BRAM="0" xd:DSP="0" xd:FF="0" xd:LUTs="0"/>
+  <xd:comp xd:name="calcDistancesHW_1" xd:componentRef="calcDistancesHW" xd:BRAM="33" xd:DSP="5" xd:FF="1060" xd:LUTs="1652"/>
+  <xd:comp xd:name="calcDistancesHW_1_if" xd:componentRef="calcDistancesHW_if" xd:BRAM="0" xd:DSP="0" xd:FF="0" xd:LUTs="0"/>
+  <xd:comp xd:name="axi_ic_ps7_M_AXI_GP0" xd:componentRef="axi_interconnect" xd:BRAM="0" xd:DSP="0" xd:FF="0" xd:LUTs="0"/>
+  <xd:comp xd:name="axi_ic_ps7_S_AXI_ACP" xd:componentRef="axi_interconnect" xd:BRAM="0" xd:DSP="0" xd:FF="0" xd:LUTs="0"/>
+  <xd:comp xd:name="ps7_irq_const" xd:componentRef="xlconstant" xd:BRAM="-1" xd:DSP="-1" xd:FF="-1" xd:LUTs="-1"/>
+  <xd:comp xd:name="acp_axcache_0xE" xd:componentRef="xlconstant" xd:BRAM="-1" xd:DSP="-1" xd:FF="-1" xd:LUTs="-1"/>
+</cf:model>

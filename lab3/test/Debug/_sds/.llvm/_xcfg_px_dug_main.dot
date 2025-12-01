@@ -1,0 +1,13 @@
+digraph defuse_graph {
+v0 [label = "def: (bb11),sw(43)@164"];
+v1 [label = "use: (bb13),hw, call:calcDistancesHW"];
+v2 [label = "def: (bb13),hw, call:calcDistancesHW"];
+v3 [label = "def: (bb15),sw(59)@173"];
+v4 [label = "use: (bb15),sw(63)@178"];
+v5 [label = "use: (bb17),sw(95)@198"];
+v6 [label = "use: (bb19),sw(113)@202"];
+v3 -> v4;
+v0 -> v1;
+v3 -> v5;
+v3 -> v6;
+}

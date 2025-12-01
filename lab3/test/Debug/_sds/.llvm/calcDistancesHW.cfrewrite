@@ -1,0 +1,18 @@
+void _p0_calcDistancesHW_1_noasync(float * data_hw, float * dists_hw);
+void _p0_calcDistancesHW_1_noasync(float * data_hw, float * dists_hw)
+{
+  switch_to_next_partition(0);
+  int start_seq[1];
+  start_seq[0] = 0;
+  cf_request_handle_t _p0_swinst_calcDistancesHW_1_cmd;
+  cf_send_i(&(_p0_swinst_calcDistancesHW_1.cmd_calcDistancesHW), start_seq, 1 * sizeof(int), &_p0_swinst_calcDistancesHW_1_cmd);
+  cf_wait(_p0_swinst_calcDistancesHW_1_cmd);
+
+  cf_send_i(&(_p0_swinst_calcDistancesHW_1.data_hw), data_hw, (32768) * 4, &_p0_request_0);
+
+  cf_receive_i(&(_p0_swinst_calcDistancesHW_1.dists_hw), dists_hw, (32) * 4, &_p0_calcDistancesHW_1_noasync_num_dists_hw, &_p0_request_1);
+
+  cf_wait(_p0_request_0);
+  cf_wait(_p0_request_1);
+}
+

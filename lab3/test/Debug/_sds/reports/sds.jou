@@ -1,0 +1,64 @@
+(c) Copyright 2012-2016 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2016.4 SW Build 1804799 on Mar  8 2017 18:29:12
+# Start time    : Sun Nov 30 19:31:28 EET 2025
+# Command line  : sds++ -o test.elf ./src/calcDist.o ./src/main.o -dmclkid 1 -mno-bitstream -mno-boot-files -perf-root main -perf-est swdata.xml -perf-funcs calcDistancesHW -sds-sys-config linux -sds-proc a9_0 -sds-pf zybo
+# Log file      : /home/sdsocuser/workspace/test/Debug/_sds/reports/sds.log
+# Journal file  : /home/sdsocuser/workspace/test/Debug/_sds/reports/sds.jou
+# Report file   : /home/sdsocuser/workspace/test/Debug/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+# INFO: [SDSoC 0-0] Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo /home/sdsocuser/workspace/test/Debug/_sds/est/calcDist.o /home/sdsocuser/workspace/test/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/sdsocuser/workspace/test/Debug/_sds/est/calcDist.o /home/sdsocuser/workspace/test/Debug/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo /home/sdsocuser/workspace/test/Debug/_sds/est/main.o /home/sdsocuser/workspace/test/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/sdsocuser/workspace/test/Debug/_sds/est/main.o /home/sdsocuser/workspace/test/Debug/_sds/.data/xddata.xml
+build_xd_ip_db  -sds-pf /opt/Xilinx/SDx/2016.4/platforms/zybo/hw/zybo.hpfm    -o /home/sdsocuser/workspace/test/Debug/_sds/.cdb/xd_ip_db.xml  
+# INFO: [SDSoC 0-0] Using prebuilt hardware
+cd /home/sdsocuser/workspace/test/Debug
+# INFO: [SDSoC 0-0] Skipping block diagram (BD), address map, port information and device registration for partition 0
+# INFO: [SDSoC 0-0] Software tracing enabled
+cd /home/sdsocuser/workspace/test/Debug/_sds/swstubs
+cd /home/sdsocuser/workspace/test/Debug
+# INFO: [SDSoC 0-0] Prepare hardware access API functions
+cd /home/sdsocuser/workspace/test/Debug
+# INFO: [SDSoC 0-0] Create accelerator stub functions
+cd /home/sdsocuser/workspace/test/Debug/_sds/swstubs
+cd /home/sdsocuser/workspace/test/Debug
+cd /home/sdsocuser/workspace/test/Debug/_sds/swstubs
+# INFO: [SDSoC 0-0] Compile hardware access API functions
+arm-linux-gnueabihf-gcc  -DPERF_EST     -I /opt/Xilinx/SDx/2016.4/aarch32-linux/include  -I /opt/Xilinx/SDx/2016.4/Vivado_HLS/include -c  /home/sdsocuser/workspace/test/Debug/_sds/swstubs/portinfo.c
+arm-linux-gnueabihf-g++      -I /opt/Xilinx/SDx/2016.4/aarch32-linux/include  -I /opt/Xilinx/SDx/2016.4/Vivado_HLS/include -c  /home/sdsocuser/workspace/test/Debug/_sds/swstubs/cf_stub.c
+arm-linux-gnueabihf-gcc     -I /opt/Xilinx/SDx/2016.4/aarch32-linux/include  -I /opt/Xilinx/SDx/2016.4/Vivado_HLS/include -c  /home/sdsocuser/workspace/test/Debug/_sds/est/sw_perf_est.c -o /home/sdsocuser/workspace/test/Debug/_sds/est/sw_perf_est.o
+arm-linux-gnueabihf-ar crs /home/sdsocuser/workspace/test/Debug/_sds/swstubs/libxlnk_stub.a /home/sdsocuser/workspace/test/Debug/_sds/swstubs/portinfo.o /home/sdsocuser/workspace/test/Debug/_sds/swstubs/cf_stub.o
+cd /home/sdsocuser/workspace/test/Debug/_sds/swstubs
+# INFO: [SDSoC 0-0] Compile accelerator stub functions
+cd /home/sdsocuser/workspace/test/Debug
+cd /home/sdsocuser/workspace/test/Debug/_sds/swstubs
+arm-linux-gnueabihf-ar crs /home/sdsocuser/workspace/test/Debug/_sds/swstubs/libtest.a /home/sdsocuser/workspace/test/Debug/_sds/swstubs/portinfo.o /home/sdsocuser/workspace/test/Debug/_sds/swstubs/cf_stub.o 
+cd /home/sdsocuser/workspace/test/Debug
+# INFO: [SDSoC 0-0] Link application ELF file
+arm-linux-gnueabihf-g++   /home/sdsocuser/workspace/test/Debug/_sds/est/sw_perf_est.o  /home/sdsocuser/workspace/test/Debug/_sds/est/calcDist.o /home/sdsocuser/workspace/test/Debug/_sds/est/main.o /home/sdsocuser/workspace/test/Debug/_sds/swstubs/portinfo.o    -L /opt/Xilinx/SDx/2016.4/aarch32-linux/lib -L/home/sdsocuser/workspace/test/Debug/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -lsds_lib -lxlnk_stub  -Wl,--end-group -o /home/sdsocuser/workspace/test/Debug/_sds/swstubs/test.elf
+arm-linux-gnueabihf-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdsdata -R .xdpp /home/sdsocuser/workspace/test/Debug/_sds/swstubs/test.elf
+cd /home/sdsocuser/workspace/test/Debug
+# INFO: [SDSoC 0-0] Calling system_linker for partition 0
+system_linker -cf-input /home/sdsocuser/workspace/test/Debug/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db /home/sdsocuser/workspace/test/Debug/_sds/.cdb/xd_ip_db.xml -ip-repo /home/sdsocuser/workspace/test/Debug/_sds/iprepo/repo -sds-pf /opt/Xilinx/SDx/2016.4/platforms/zybo:linux  -sds-sys-config linux -sds-proc a9_0      -target-os linux -mdev-no-swgen -mdev-no-xsd -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf /home/sdsocuser/workspace/test/Debug/_sds/swstubs/test.elf
+# INFO: [SDSoC 0-0] Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo /home/sdsocuser/workspace/test/Debug/_sds/est/.accdata/calcDist.o /home/sdsocuser/workspace/test/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/sdsocuser/workspace/test/Debug/_sds/est/.accdata/calcDist.o /home/sdsocuser/workspace/test/Debug/_sds/.data/calcDistancesHW.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp /home/sdsocuser/workspace/test/Debug/_sds/est/.accdata/calcDist.o /home/sdsocuser/workspace/test/Debug/_sds/.pp/calcDist.ii
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap /home/sdsocuser/workspace/test/Debug/_sds/est/.accdata/calcDist.o /home/sdsocuser/workspace/test/Debug/_sds/.cdb/calcDistancesHW.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore /home/sdsocuser/workspace/test/Debug/_sds/est/.accdata/calcDist.o /home/sdsocuser/workspace/test/Debug/_sds/iprepo/repo/xilinx_com_hls_calcDistancesHW_1_0/xilinx_com_hls_calcDistancesHW_1_0.zip
+unzip -u -o /home/sdsocuser/workspace/test/Debug/_sds/iprepo/repo/xilinx_com_hls_calcDistancesHW_1_0/xilinx_com_hls_calcDistancesHW_1_0.zip -d /home/sdsocuser/workspace/test/Debug/_sds/iprepo/repo/xilinx_com_hls_calcDistancesHW_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif /home/sdsocuser/workspace/test/Debug/_sds/est/.accdata/calcDist.o /home/sdsocuser/workspace/test/Debug/_sds/.cdb/calcDistancesHW_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo /home/sdsocuser/workspace/test/Debug/_sds/est/main.o /home/sdsocuser/workspace/test/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata /home/sdsocuser/workspace/test/Debug/_sds/est/main.o /home/sdsocuser/workspace/test/Debug/_sds/.data/xddata.xml
+build_xd_ip_db  -sds-pf /opt/Xilinx/SDx/2016.4/platforms/zybo/hw/zybo.hpfm  -ip /home/sdsocuser/workspace/test/Debug/_sds/iprepo/repo/xilinx_com_hls_calcDistancesHW_1_0  -o /home/sdsocuser/workspace/test/Debug/_sds/.cdb/xd_ip_db.xml  
+# INFO: [SDSoC 0-0] Generating data motion network
+llvm-link -o /home/sdsocuser/workspace/test/Debug/_sds/.llvm/sds_all.o /home/sdsocuser/workspace/test/Debug/_sds/.llvm/./src/calcDist.s /home/sdsocuser/workspace/test/Debug/_sds/.llvm/./src/main.s
+cd /home/sdsocuser/workspace/test/Debug/_sds/.llvm
+cd /home/sdsocuser/workspace/test/Debug/_sds/.llvm
+XidanePass  --platform zybo  --dmclkid 1  --repo /home/sdsocuser/workspace/test/Debug/_sds/.cdb/xd_ip_db.xml  --dmdb /opt/Xilinx/SDx/2016.4/data/DM.db   -os linux -processor cortex-a9   -perfest
+cd /home/sdsocuser/workspace/test/Debug
+perf_est  -s swdata.xml  -hw /home/sdsocuser/workspace/test/Debug/_sds/.llvm/hw_perf_est.xml  -r /home/sdsocuser/workspace/test/Debug/_sds/.cdb/xd_ip_db.xml  -est_ws /home/sdsocuser/workspace/test/Debug/_sds/est  -apsys /home/sdsocuser/workspace/test/Debug/_sds/.llvm/apsys_0.xml
+# sds++ completed at Sun Nov 30 19:31:31 EET 2025

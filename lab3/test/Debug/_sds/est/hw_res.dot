@@ -1,0 +1,13 @@
+digraph hw {
+zybo [label = "zybo", shape = box, style = filled, fillcolor = green];
+calcDistancesHW_1 [label = "calcDistancesHW_1\ndsps:5, bram:33, luts:1652, FFs:1060\nestimated latency: 3088826", shape = box, style = filled, fillcolor = yellow];
+dm_0 [label = "dm_0\ndsps:0, bram:0, luts:0, FFs:0", shape = box, style = filled, fillcolor = yellow];
+dm_1 [label = "dm_1\ndsps:0, bram:0, luts:0, FFs:0", shape = box, style = filled, fillcolor = yellow];
+
+zybo -> calcDistancesHW_1 [label = "cmd_calcDistancesHW"]
+zybo -> dm_0 [label = "data_hw"]
+dm_0 -> calcDistancesHW_1 [label = "data_hw"]
+calcDistancesHW_1 -> dm_1 [label = "dists_hw"]
+dm_1 -> zybo [label = "dists_hw"]
+graph [label = "Total Resources: dsps:5/80, bram:33/60, luts:1652/17600, FFs:1060/35200\nFor graph with functions: calcDistancesHW:main.cpp:169, estimated hardware latency =  3092550\n"];
+}

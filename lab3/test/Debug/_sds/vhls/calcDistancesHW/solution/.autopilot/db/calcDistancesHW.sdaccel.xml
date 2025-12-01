@@ -1,0 +1,185 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'calcDistancesHW'" level="0">
+<item name = "Date">Sun Nov 30 19:31:01 2025
+</item>
+<item name = "Version">2016.4 (Build 1722992 on Wed Mar 08 18:30:27 MST 2017)</item>
+<item name = "Project">calcDistancesHW</item>
+<item name = "Solution">solution</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z010clg400-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">10.00</item>
+<item name = "Clock uncertainty (ns)">1.25</item>
+<item name = "Estimated clock period (ns)">8.68</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">475204, 475204, 475205, 475205, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- LOAD_DATA_HW_TMP">34816, 34816, 34, -, -, 1024, no</column>
+<column name=" + LOAD_DATA_HW_TMP.1">32, 32, 1, -, -, 32, no</column>
+<column name="- LOAD_MOVIE_TMP">64, 64, 2, -, -, 32, no</column>
+<column name="- COMPUTE_DISTS">438272, 438272, 428, -, -, 1024, no</column>
+<column name=" + COMPUTE_DISTS.1">416, 416, 13, -, -, 32, no</column>
+<column name="- WRITE_DISTS">2048, 2048, 2, -, -, 1024, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 110</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, 5, 702, 1331</column>
+<column name="Memory">67, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 211</column>
+<column name="Register">-, -, 358, -</column>
+<specialColumn name="Available">120, 80, 35200, 17600</specialColumn>
+<specialColumn name="Utilization (%)">55, 6, 3, 9</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="calcDistancesHW_feOg_U1">calcDistancesHW_feOg, 0, 2, 227, 404</column>
+<column name="calcDistancesHW_ffYi_U2">calcDistancesHW_ffYi, 0, 3, 128, 320</column>
+<column name="calcDistancesHW_fg8j_U3">calcDistancesHW_fg8j, 0, 0, 347, 607</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="data_hw_tmp_U">calcDistancesHW_dbkb, 64, 0, 0, 32768, 32, 1, 1048576</column>
+<column name="dists_hw_tmp_U">calcDistancesHW_ddEe, 2, 0, 0, 1024, 32, 1, 32768</column>
+<column name="movie_tmp_U">calcDistancesHW_mcud, 1, 0, 0, 32, 32, 1, 1024</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_1_fu_311_p2">+, 0, 0, 6, 6, 1</column>
+<column name="i_2_fu_268_p2">+, 0, 0, 11, 11, 1</column>
+<column name="i_3_fu_387_p2">+, 0, 0, 11, 11, 1</column>
+<column name="i_4_fu_339_p2">+, 0, 0, 11, 11, 1</column>
+<column name="j_1_fu_294_p2">+, 0, 0, 6, 6, 1</column>
+<column name="j_2_fu_370_p2">+, 0, 0, 6, 6, 1</column>
+<column name="tmp_3_fu_354_p2">+, 0, 0, 17, 17, 17</column>
+<column name="tmp_8_fu_278_p2">+, 0, 0, 17, 17, 17</column>
+<column name="ap_block_state3">and, 0, 0, 1, 1, 1</column>
+<column name="exitcond1_fu_364_p2">icmp, 0, 0, 3, 6, 7</column>
+<column name="exitcond2_fu_333_p2">icmp, 0, 0, 5, 11, 12</column>
+<column name="exitcond3_fu_305_p2">icmp, 0, 0, 3, 6, 7</column>
+<column name="exitcond4_fu_288_p2">icmp, 0, 0, 3, 6, 7</column>
+<column name="exitcond5_fu_262_p2">icmp, 0, 0, 5, 11, 12</column>
+<column name="exitcond_fu_381_p2">icmp, 0, 0, 5, 11, 12</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">30, 32, 1, 32</column>
+<column name="data_hw_blk_n">1, 2, 1, 2</column>
+<column name="data_hw_tmp_address0">15, 4, 15, 60</column>
+<column name="dists_hw_blk_n">1, 2, 1, 2</column>
+<column name="dists_hw_tmp_address0">10, 3, 10, 30</column>
+<column name="grp_fu_235_opcode">2, 3, 2, 6</column>
+<column name="grp_fu_235_p0">32, 3, 32, 96</column>
+<column name="grp_fu_235_p1">32, 3, 32, 96</column>
+<column name="i1_reg_179">6, 2, 6, 12</column>
+<column name="i2_reg_190">11, 2, 11, 22</column>
+<column name="i4_reg_224">11, 2, 11, 22</column>
+<column name="i_reg_157">11, 2, 11, 22</column>
+<column name="j3_reg_213">6, 2, 6, 12</column>
+<column name="j_reg_168">6, 2, 6, 12</column>
+<column name="movie_tmp_address0">5, 3, 5, 15</column>
+<column name="sum_reg_201">32, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">31, 0, 31, 0</column>
+<column name="data_hw_tmp_load_1_reg_468">32, 0, 32, 0</column>
+<column name="diff_reg_478">32, 0, 32, 0</column>
+<column name="i1_cast4_reg_414">6, 0, 32, 26</column>
+<column name="i1_reg_179">6, 0, 6, 0</column>
+<column name="i2_cast3_reg_432">11, 0, 32, 21</column>
+<column name="i2_reg_190">11, 0, 11, 0</column>
+<column name="i4_reg_224">11, 0, 11, 0</column>
+<column name="i_1_reg_427">6, 0, 6, 0</column>
+<column name="i_2_reg_401">11, 0, 11, 0</column>
+<column name="i_3_reg_502">11, 0, 11, 0</column>
+<column name="i_4_reg_445">11, 0, 11, 0</column>
+<column name="i_reg_157">11, 0, 11, 0</column>
+<column name="j3_reg_213">6, 0, 6, 0</column>
+<column name="j_2_reg_458">6, 0, 6, 0</column>
+<column name="j_reg_168">6, 0, 6, 0</column>
+<column name="movie_tmp_load_reg_473">32, 0, 32, 0</column>
+<column name="sum_reg_201">32, 0, 32, 0</column>
+<column name="tmp_11_cast_reg_437">11, 0, 17, 6</column>
+<column name="tmp_5_cast_reg_393">11, 0, 17, 6</column>
+<column name="tmp_6_reg_494">32, 0, 32, 0</column>
+<column name="tmp_9_reg_484">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, calcDistancesHW, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, calcDistancesHW, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, calcDistancesHW, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, calcDistancesHW, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, calcDistancesHW, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, calcDistancesHW, return value</column>
+<column name="data_hw_dout">in, 32, ap_fifo, data_hw, pointer</column>
+<column name="data_hw_empty_n">in, 1, ap_fifo, data_hw, pointer</column>
+<column name="data_hw_read">out, 1, ap_fifo, data_hw, pointer</column>
+<column name="dists_hw_din">out, 32, ap_fifo, dists_hw, pointer</column>
+<column name="dists_hw_full_n">in, 1, ap_fifo, dists_hw, pointer</column>
+<column name="dists_hw_write">out, 1, ap_fifo, dists_hw, pointer</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">8.68</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'sum'">phi, 0.00, 0.00, -, -, -, -, -, -, -, -, -, -, &apos;sum&apos;, /home/sdsocuser/workspace/test/src/calcDist.cpp:28</column>
+<column name="'tmp_6', /home/sdsocuser/workspace/test/src/calcDist.cpp:30">fsqrt, 8.68, 8.68, -, -, -, -, -, -, -, -, -, -, -</column>
+</table>
+</item>
+</section>
+</profile>

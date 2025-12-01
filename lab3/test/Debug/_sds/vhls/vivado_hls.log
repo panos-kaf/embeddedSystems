@@ -1,0 +1,95 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2016.4
+  Build 1722992 on Wed Mar 08 18:30:27 MST 2017
+  Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
+================================================================
+INFO: [HLS 200-10] Running '/opt/Xilinx/SDx/2016.4/Vivado_HLS/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'sdsocuser' on host 'sdsocuser-VirtualBox' (Linux_x86_64 version 5.4.0-150-generic) on Sun Nov 30 19:30:58 EET 2025
+INFO: [HLS 200-10] On os Ubuntu 18.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/sdsocuser/workspace/test/Debug/_sds/vhls'
+INFO: [HLS 200-10] Creating and opening project '/home/sdsocuser/workspace/test/Debug/_sds/vhls/calcDistancesHW'.
+INFO: [HLS 200-10] Adding design file '/home/sdsocuser/workspace/test/src/calcDist.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/sdsocuser/workspace/test/Debug/_sds/vhls/calcDistancesHW/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to ' xc7z010clg400-2 '
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Analyzing design file '/home/sdsocuser/workspace/test/src/calcDist.cpp' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 330.512 ; gain = 12.586 ; free physical = 3161 ; free virtual = 7150
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 330.512 ; gain = 12.586 ; free physical = 3161 ; free virtual = 7149
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 330.512 ; gain = 12.586 ; free physical = 3139 ; free virtual = 7132
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 458.508 ; gain = 140.582 ; free physical = 3127 ; free virtual = 7121
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 458.508 ; gain = 140.582 ; free physical = 3110 ; free virtual = 7104
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 458.508 ; gain = 140.582 ; free physical = 3109 ; free virtual = 7104
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcDistancesHW' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'calcDistancesHW' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-71] Latency directive discarded for region calcDistancesHW since it contains subloops.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 3.01 seconds; current allocated memory: 75.772 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 76.238 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'calcDistancesHW' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcDistancesHW/data_hw' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcDistancesHW/dists_hw' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'calcDistancesHW' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'calcDistancesHW_data_hw_tmp' to 'calcDistancesHW_dbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'calcDistancesHW_movie_tmp' to 'calcDistancesHW_mcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'calcDistancesHW_dists_hw_tmp' to 'calcDistancesHW_ddEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'calcDistancesHW_faddfsub_32ns_32ns_32_4_full_dsp' to 'calcDistancesHW_feOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'calcDistancesHW_fmul_32ns_32ns_32_3_max_dsp' to 'calcDistancesHW_ffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'calcDistancesHW_fsqrt_32ns_32ns_32_10' to 'calcDistancesHW_fg8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'calcDistancesHW_feOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcDistancesHW_ffYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcDistancesHW_fg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'calcDistancesHW'.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 76.862 MB.
+INFO: [RTMG 210-278] Implementing memory 'calcDistancesHW_dbkb_ram' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'calcDistancesHW_mcud_ram' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'calcDistancesHW_ddEe_ram' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 458.508 ; gain = 140.582 ; free physical = 3103 ; free virtual = 7104
+INFO: [SYSC 207-301] Generating SystemC RTL for calcDistancesHW.
+INFO: [VHDL 208-304] Generating VHDL RTL for calcDistancesHW.
+INFO: [VLOG 209-307] Generating Verilog RTL for calcDistancesHW.
+INFO: [IMPL 213-8] Exporting RTL as an IP in IP-XACT.
+
+
+****** Vivado v2016.4_sdx (64-bit)
+  **** SW Build 1806307 on Thu Mar  9 15:24:27 MST 2017
+  **** IP Build 1759159 on Thu Jan 26 07:31:30 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+Sourcing tcl script '/opt/Xilinx/SDx/2016.4/Vivado/scripts/init.tcl'
+0 Beta devices matching pattern found, 0 enabled.
+Loaded SDSoC Platform Tcl Library
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/SDx/2016.4/Vivado/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'calcDistancesHW_ap_fmul_1_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'calcDistancesHW_ap_fmul_1_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'calcDistancesHW_ap_fmul_1_max_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'calcDistancesHW_ap_fsqrt_8_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'calcDistancesHW_ap_fsqrt_8_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'calcDistancesHW_ap_fsqrt_8_no_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'calcDistancesHW_ap_faddfsub_2_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'calcDistancesHW_ap_faddfsub_2_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'calcDistancesHW_ap_faddfsub_2_full_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/SDx/2016.4/Vivado/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 30 19:31:09 2025...
+INFO: [HLS 200-112] Total elapsed time: 28.7 seconds; peak allocated memory: 76.862 MB.

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<cf:model cf:name="top" xmlns:cf="http://www.xilinx.com/connections" xd:type="design" xmlns:xd="http://www.xilinx.com/xidane">
+  <xd:cluster xd:num_functions="1" xd:function_names="calcDistancesHW:main.cpp:169"  xd:latency="3092550">
+    <xd:function xd:function_name="calcDistancesHW:main.cpp:169" xd:accelerator_name="calcDistancesHW_1" xd:accelerator_latency="3088826">
+      <xd:argument xd:argument_name="data_hw" xd:argument_latency="220664"/>
+      <xd:argument xd:argument_name="dists_hw" xd:argument_latency="3088828"/>
+    </xd:function>
+  </xd:cluster>
+</cf:model>
