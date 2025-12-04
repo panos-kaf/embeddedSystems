@@ -1,4 +1,4 @@
-sh-4.3# time ./pipeline_partition_unroll_tripcount.elf 
+sh-4.3# time ./part2.elf 
 KNN based Recommendation System Acceleration
 Input movie id = 0
 Started distance calculations on software...
@@ -12,7 +12,7 @@ Recommendations for movie with id 0:
 0. Jurassic Park (1993), with distance of 10.7121
 1. Fish Called Wanda  A (1988), with distance of 11.0793
 2. Back to the Future (1985), with distance of 11.6404
-3. Star Wars: Episode VI - Return of the Jedi (1983), with distance of 11.8849
+3. Star Wars: Episode VI - Return of the Jedi (1983), with distance of 11.9
 4. Lion King  The (1994), with distance of 12.0623
 5. Raising Arizona (1987), with distance of 12.1552
 6. Wizard of Oz  The (1939), with distance of 12.1861
@@ -20,11 +20,11 @@ Recommendations for movie with id 0:
 8. Princess Bride  The (1987), with distance of 12.3085
 9. E.T. the Extra-Terrestrial (1982), with distance of 12.3996
 
-Hardware cycles : 277790
-Software cycles : 1584485
-Speedup         : 5.7039
+Hardware cycles : 250383
+Software cycles : 1585290
+Speedup         : 6.33146
 Correct = 1024, Score = 1.000000 
 
-real    0m2.962s
-user    0m2.930s
+real    0m2.925s
+user    0m2.880s
 sys     0m0.000s

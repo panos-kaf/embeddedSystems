@@ -1,0 +1,26 @@
+sh-4.3# ./part2.elf 
+KNN based Recommendation System Acceleration
+Input movie id = 0
+Started distance calculations on software...
+Finished distance calculations on software...
+Started distance calculations on hardware...
+Finished distance calculations on hardware...
+
+Recommendation system start to make inference
+...
+Recommendations for movie with id 0:
+0. Liar Liar (1997), with distance of 0
+1. Birds  The (1963), with distance of 1.22474
+2. Space Jam (1996), with distance of 1.32288
+3. Cape Fear (1962), with distance of 1.32288
+4. Taxi Driver (1976), with distance of 1.65831
+5. Get Shorty (1995), with distance of 1.80278
+6. Johnny Mnemonic (1995), with distance of 1.80278
+7. Alien (1979), with distance of 1.93649
+8. Nightmare on Elm Street  A (1984), with distance of 2.17945
+9. Graduate  The (1967), with distance of 2.23607
+
+Hardware cycles : 929359
+Software cycles : 1583358
+Speedup         : 1.70371
+Correct = 142, Score = 0.138672
