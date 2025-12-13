@@ -1,0 +1,13 @@
+Configuration,Min Latency (Cycles),BRAM_18K (%),DSP48E (%),FF (%),LUT (%)
+pipeline_and_unrolling,53125,55,17,38,72
+pipeline_everywhere_and_unroll,50304,56,17,22,81
+pipeline_partition_unroll,42159,55,35,24,60
+pipeline_everywhere,50366,56,17,13,38
+pipeline_inner,132156,55,6,3,10
+unrolling_factor2,327204,56,6,3,10
+partition_factor32,478277,80,6,10,18
+unrolling_factor32_1024_4,71939,55,17,25,86
+unrolling_factor_32_64,185364,55,6,9,23
+unrolling_factor_32_64_12,59375,55,17,36,91
+unrolling_factor32_64_4,71956,55,17,22,52
+unrolling_factor8_16,216152,56,6,3,13
