@@ -51,7 +51,7 @@ int main(){
     char msg[64]; 
     printf("Enter text:\n");
     if (scanf("%63s", msg) == 1) {
-        // Append Newline so Guest's ICANON triggers
+        // append newline so guests ICANON triggers
         strcat(msg, "\n");
         write(fd, msg, strlen(msg));
     }
@@ -61,18 +61,18 @@ int main(){
     int n;
     unsigned char signal_byte;
     
-    // 1. Wait for Header (0xFF)
+    // wait for header
     while(1) {
         n = read(fd, &signal_byte, 1);
         if(n > 0 && signal_byte == 0xFF) break;
     }
 
-    // 2. Read Char (It's 1 byte, not sizeof(int)!)
+    // read char
     unsigned char c_val;
     n = read(fd, &c_val, 1); 
     if (n <= 0) printf("failed to read char\n");
 
-    // 3. Read Freq (It's 1 byte, not sizeof(int)!)
+    // read freq
     unsigned char freq_val;
     n = read(fd, &freq_val, 1);
     if (n <= 0) printf("failed to read freq\n");
