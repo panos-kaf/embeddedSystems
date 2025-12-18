@@ -3,6 +3,8 @@ CC = gcc
 FLAGS = -g
 THUMB_FLAGS = -mthumb
 
+all: arm thumb
+
 arm:
 	$(CC) $(FLAGS) -c string_manipulation.c
 	$(CC) $(FLAGS) -c strlib.s
