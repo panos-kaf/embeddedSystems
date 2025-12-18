@@ -34,6 +34,7 @@ _start:
     svc #0
 
 @ r0 = buffer index
+@ r1 = buffer pointer
 
     ldr r3, =char_table
 
@@ -72,29 +73,27 @@ find_max:
     bge find_max
 
 
-@ 1. Start with the Header (0xFF)
-    mov r4, #0xFF       @ r4 = 0x000000FF
+@ header (0xFF)
+    mov r4, #0xFF
 
-@ 2. Shift Char left by 8 bits and OR it in
-    lsl r6, r6, #8      @ Char becomes 0x00004100
-    orr r4, r4, r6      @ r4 is now 0x000041FF
+@ char 
+    lsl r6, r6, #8
+    orr r4, r4, r6
 
-@ 3. Shift Freq left by 16 bits and OR it in
-    lsl r5, r5, #16     @ Freq becomes 0x00050000
-    orr r4, r4, r5      @ r4 is now 0x000541FF
+@ freq 
+    lsl r5, r5, #16
+    orr r4, r4, r5
 
-@ 4. Push ONLY this packed register
-    push {r4}           
-@ Stack Memory at sp is now: [FF] [41] [05] [00] ... Perfect!
+    push {r4} 
 
-@ 5. Write exactly 3 bytes
+@ write result
     mov r0, r10         @ fd
     mov r1, sp          @ buffer
     mov r2, #3          @ len = 3 bytes
     mov r7, #4          @ sys_write
     svc #0
     
-    add sp, sp, #4      @ Clean up the 1 register we pushed
+    add sp, sp, #4      @ pop
 
 exit_program:
     mov r0, #0
