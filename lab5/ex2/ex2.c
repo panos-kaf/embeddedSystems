@@ -27,17 +27,16 @@ void dump_termios(const struct termios *t)
 int main(){
 
     int fd;
-    fd = open("/dev/ttys004", O_RDWR, S_IRWXU);
+    fd = open("/dev/pts/2", O_RDWR, S_IRWXU);
     if (fd < 0){
         perror("open");
-        printf("open failed\n");
         return 1;
     }
 
     struct termios trm;
     tcgetattr(fd, &trm);
 
-    dump_termios(&trm);
+    //dump_termios(&trm);
 
     cfmakeraw(&trm);                 // raw mode
     cfsetispeed(&trm, B9600);
@@ -47,20 +46,38 @@ int main(){
 
     tcsetattr(fd, TCSANOW, &trm);
 
-    char msg[64] = "test test 123\n";
-    int cnt = 64;
+    tcflush(fd, TCIFLUSH);
 
-    write(fd, msg, strlen(msg));
+    char msg[64]; 
+    printf("Enter text:\n");
+    if (scanf("%63s", msg) == 1) {
+        // Append Newline so Guest's ICANON triggers
+        strcat(msg, "\n");
+        write(fd, msg, strlen(msg));
+    }
 
     //sleep(1);
 
-    char buf[64];
-    int n = read(fd, buf, sizeof(buf) - 1);
-    if (n > 0) {
-        buf[n] = '\0';
-        printf("%s", buf);
+    int n;
+    unsigned char signal_byte;
+    
+    // 1. Wait for Header (0xFF)
+    while(1) {
+        n = read(fd, &signal_byte, 1);
+        if(n > 0 && signal_byte == 0xFF) break;
     }
 
+    // 2. Read Char (It's 1 byte, not sizeof(int)!)
+    unsigned char c_val;
+    n = read(fd, &c_val, 1); 
+    if (n <= 0) printf("failed to read char\n");
+
+    // 3. Read Freq (It's 1 byte, not sizeof(int)!)
+    unsigned char freq_val;
+    n = read(fd, &freq_val, 1);
+    if (n <= 0) printf("failed to read freq\n");
+    
+    printf("The most frequent character is \"%c\" and it appeared %d times.\n", c_val, freq_val);
     close(fd);
 
     return 0;

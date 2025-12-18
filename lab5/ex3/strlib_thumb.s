@@ -1,0 +1,104 @@
+.syntax unified      @ 1. Allow modern syntax
+.thumb               @ 3. FORCE Thumb mode generation
+
+
+.text
+.global strcpy /* όνομα συνάρτησης */
+.type strcpy, %function
+
+strcpy:
+    @ r0 = &trg
+    @ r1 = &src
+    
+    push {r0}
+
+strcpy_loop:
+    ldrb r2, [r1]
+    adds r1, #1
+    cmp r2, #0
+    beq strcpy_end
+    strb r2, [r0]
+    adds r0, #1
+    b strcpy_loop
+
+strcpy_end:
+    strb r2, [r0]
+    pop {r0}
+    bx lr
+
+@ - - - - -
+
+.text
+.global strcmp /* όνομα συνάρτησης */
+.type strcmp, %function
+
+strcmp:
+    @ r0 = s1
+    @ r1 = s2
+
+    ldrb r2, [r0]
+    adds r0, #1
+    ldrb r3, [r1]
+    adds r1, #1
+    cmp r2, #0
+    beq exit_strcmp
+    cmp r2, r3
+    beq strcmp
+
+exit_strcmp:
+    subs r0, r2, r3
+    bx lr
+
+@ - - - - -
+
+.text
+.global strcat /* όνομα συνάρτησης */
+.type strcat, %function
+
+strcat:
+    @ r0 = trg
+    @ r1 = src
+    
+    push {r0}
+
+strcat_loop1:
+    ldrb r2, [r0]
+    adds r0, #1
+    cmp r2, #0
+    bne strcat_loop1
+
+    subs r0, #1 @ go back to null char
+
+strcat_loop2:
+    ldrb r2, [r1]
+    adds r1, #1
+    strb r2, [r0]
+    adds r0, #1
+    cmp r2, #0
+    bne strcat_loop2
+
+    pop {r0}
+    bx lr
+
+@ - - - - -
+
+.text
+.global strlen /* όνομα συνάρτησης */
+.type strlen, %function
+
+strlen:
+    @ r0 = str
+    
+    movs r1, #0
+
+strlen_loop:
+    ldrb r2, [r0]
+    adds r0, #1
+    cmp r2, #0
+    beq strlen_end
+    adds r1, #1
+    b strlen_loop
+
+strlen_end:
+    movs r0, r1
+    bx lr
